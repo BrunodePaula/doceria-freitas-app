@@ -1,6 +1,7 @@
 package br.com.brunodepaula.doceriafreitas
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 
 class TelaCadastroActivity : AppCompatActivity() {
@@ -9,7 +10,17 @@ class TelaCadastroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_telacadastro)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Adicionar Cliente"
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        val id = item?.itemId
+        if (id == android.R.id.home) {
+            finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }

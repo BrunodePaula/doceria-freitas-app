@@ -2,15 +2,25 @@ package br.com.brunodepaula.doceriafreitas
 
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
+import kotlinx.android.synthetic.main.toolbar.*
 
-class Tela_inicial_Activity : AppCompatActivity() {
+class Tela_inicial_Activity : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+
 
     override  fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -53,8 +63,14 @@ class Tela_inicial_Activity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // colocar toolbar
+        setSupportActionBar(toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        configuraMenuLateral()
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -92,6 +108,44 @@ class Tela_inicial_Activity : AppCompatActivity() {
             finish()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    // configuração do navigation Drawer com a toolbar
+    private fun configuraMenuLateral() {
+        // ícone de menu (hamburger) para mostrar o menu
+        var toogle = ActionBarDrawerToggle(this, layoutMenuLateral, toolbar, R.string.nav_open, R.string.nav_close)
+
+        layoutMenuLateral.addDrawerListener(toogle)
+        toogle.syncState()
+
+        menu_lateral.setNavigationItemSelectedListener(this)
+    }
+
+    // método que deve ser implementado quando a activity implementa a interface NavigationView.OnNavigationItemSelectedListener
+    // para tratar os eventos de clique no menu lateral
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_pedidos -> {
+                Toast.makeText(this, "Clicou pedidos", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.nav_mensagens -> {
+                Toast.makeText(this, "Clicou Mensagens", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.nav_config -> {
+                Toast.makeText(this, "Clicou configuração", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.nav_sair -> {
+                Toast.makeText(this, "Clicou sair", Toast.LENGTH_SHORT).show()
+                cliqueSair()
+            }
+        }
+
+        // fecha menu depois de tratar o evento
+        layoutMenuLateral.closeDrawer(GravityCompat.START)
+        return true
     }
 
 }

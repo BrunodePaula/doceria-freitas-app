@@ -9,7 +9,6 @@ import java.net.URL
 object ClientesService {
 
     val host = "http://doceriafreitas-com-br.umbler.net"
-    //val host = "https://fesousa.pythonanywhere.com"
     val TAG = "WS_LMSApp"
 
     fun getClientes(context: Context): List<Clientes> {
@@ -27,6 +26,7 @@ object ClientesService {
 
     fun save(clientes: Clientes): Response {
         val json = HttpHelper.post("$host/clients", clientes.toJson())
+        Log.d(TAG, json)
         return parserJson(json)
     }
 

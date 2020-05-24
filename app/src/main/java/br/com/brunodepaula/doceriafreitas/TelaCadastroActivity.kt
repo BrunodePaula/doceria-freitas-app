@@ -21,7 +21,8 @@ class TelaCadastroActivity : AppCompatActivity() {
             clientes.name = editNome.text.toString()
             clientes.telephone = editTelefone.text.toString()
             clientes.cpf = editCpf.text.toString()
-            clientes.disabled = 0
+            clientes.email = editEmail.toString()
+            clientes.disabled = "0"
 
             taskAtualizar(clientes)
         }

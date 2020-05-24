@@ -3,12 +3,12 @@ package br.com.brunodepaula.doceriafreitas
 import com.google.gson.GsonBuilder
 import java.io.Serializable
 
-class Clientes : Serializable {
+class Clientes : Serializable{
     var name: String = ""
     var cpf: String = ""
     var telephone: String = ""
     var email: String = ""
-    var disabled: Int = 0
+    var disabled: String = ""
 
 
     override fun toString(): String {

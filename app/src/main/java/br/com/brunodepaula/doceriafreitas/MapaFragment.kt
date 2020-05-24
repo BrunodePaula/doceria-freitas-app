@@ -37,11 +37,11 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
 
         map?.isMyLocationEnabled = ok
 
-        var location = LatLng(-23.5255322, -46.649481)
+        var location = LatLng(-23.519888, -46.497708)
         val update = CameraUpdateFactory.newLatLngZoom(location, 18f)
         map?.moveCamera(update)
 
-        map?.addMarker(MarkerOptions().title("FIT").snippet("Faculdade impacta de tecnologia").position(location))
+        map?.addMarker(MarkerOptions().title("DOCERIA FREITAS").snippet("Distribuidora de produtos alimentícios").position(location))
 
         map?.mapType = GoogleMap.MAP_TYPE_NORMAL
 

@@ -42,21 +42,21 @@ class ClientesAdapter (
 
         val clientes =  clientes[position]
 
-        holder.cardNome.text = clientes.nome
+        holder.cardNome.text = clientes.name
         holder.cardProgress.visibility = View.VISIBLE
 
-        Picasso.with(context).load(clientes.foto).fit().into(
-            holder.cardImage,
-            object: com.squareup.picasso.Callback {
-                override fun onSuccess() {
-                    holder.cardProgress.visibility = View.GONE
-                }
+        //Picasso.with(context).load(clientes.url).fit().into(
+        //   holder.cardImage,
+        //  object: com.squareup.picasso.Callback {
+        //      override fun onSuccess() {
+        //          holder.cardProgress.visibility = View.GONE
+        //      }
 
-                override fun onError() {
-                    holder.cardProgress.visibility = View.GONE
-                }
-            }
-        )
+        //      override fun onError() {
+        //          holder.cardProgress.visibility = View.GONE
+        //      }
+        //  }
+        //)
 
         holder.itemView.setOnClickListener { onClick(clientes) }
     }

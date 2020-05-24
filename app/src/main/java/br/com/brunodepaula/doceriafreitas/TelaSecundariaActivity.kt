@@ -36,12 +36,16 @@ class TelaSecundariaActivity : AppCompatActivity() {
     }
 
     fun taskClientes() {
-        clientes = ClientesService.getClientes(context)
-        recyclerClientes?.adapter = ClientesAdapter(clientes) { onClickClientes(it) }
+        Thread {
+            this.clientes = ClientesService.getClientes(context)
+            runOnUiThread {
+                recyclerClientes?.adapter = ClientesAdapter(clientes) { onClickClientes(it) }
+            }
+        }.start()
     }
 
     fun onClickClientes(clientes: Clientes) {
-        Toast.makeText(context, "Clicou em ${clientes.nome}", Toast.LENGTH_LONG).show()
+        Toast.makeText(context, "Clicou em ${clientes.name}", Toast.LENGTH_LONG).show()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

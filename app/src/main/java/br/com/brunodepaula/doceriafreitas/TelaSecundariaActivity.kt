@@ -1,6 +1,7 @@
 package br.com.brunodepaula.doceriafreitas
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -40,12 +41,22 @@ class TelaSecundariaActivity : AppCompatActivity() {
             this.clientes = ClientesService.getClientes(context)
             runOnUiThread {
                 recyclerClientes?.adapter = ClientesAdapter(clientes) { onClickClientes(it) }
+                enviaNotificacao(clientes.get(0))
             }
         }.start()
     }
 
+    fun enviaNotificacao(clientes: Clientes) {
+        // Intent para abrir tela quando clicar na notificação
+        val intent = Intent(this, TelaSecundariaActivity::class.java)
+        // parâmetros extras
+        intent.putExtra("clientes", clientes)
+        // Disparar notificação
+        NotificationUtil.create(this, 1, intent, "Doceria Freitas", "Você tem um novo cliente: ${clientes.name}")
+    }
+
     fun onClickClientes(clientes: Clientes) {
-        Toast.makeText(context, "Clicou em ${clientes.name}", Toast.LENGTH_LONG).show()
+        Toast.makeText(context, "Cliente: ${clientes.name}", Toast.LENGTH_LONG).show()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

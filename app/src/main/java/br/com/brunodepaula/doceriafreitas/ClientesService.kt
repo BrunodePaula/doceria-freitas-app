@@ -14,7 +14,7 @@ object ClientesService {
 
     fun getClientes(context: Context): List<Clientes> {
         if(AndroidUtils.isInternetDisponivel(context)) {
-            val url = "$host/product"
+            val url = "$host/clients"
             val json = HttpHelper.get(url)
 
             Log.d(TAG, json)

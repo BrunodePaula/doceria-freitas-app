@@ -6,9 +6,9 @@
             android:icon="@drawable/ic_pedidos"
             android:title="Pedidos" />
         <item
-            android:id="@+id/nav_mensagens"
-            android:icon="@drawable/ic_chat_black"
-            android:title="Mensagens" />
+            android:id="@+id/nav_localizacao"
+            android:icon="@drawable/ic_local_black"
+            android:title="Localização" />
         <item
             android:id="@+id/nav_config"
             android:icon="@drawable/ic_configuracoes_black"

@@ -16,14 +16,14 @@ class ClientesAdapter (
 
     class ClientesViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val cardNome: TextView
-        val cardImage: ImageView
-        val cardProgress: ProgressBar
+        /*val cardImage: ImageView
+        val cardProgress: ProgressBar*/
         val cardView: CardView
 
         init {
             cardNome = view.findViewById(R.id.cardNome)
-            cardImage = view.findViewById(R.id.cardImage)
-            cardProgress = view.findViewById(R.id.cardProgress)
+           /* cardImage = view.findViewById(R.id.cardImage)
+            cardProgress = view.findViewById(R.id.cardProgress)*/
             cardView = view.findViewById(R.id.card_clientes)
         }
     }
@@ -43,7 +43,7 @@ class ClientesAdapter (
         val clientes =  clientes[position]
 
         holder.cardNome.text = clientes.name
-        holder.cardProgress.visibility = View.VISIBLE
+//        holder.cardProgress.visibility = View.VISIBLE
 
         //Picasso.with(context).load(clientes.url).fit().into(
         //   holder.cardImage,

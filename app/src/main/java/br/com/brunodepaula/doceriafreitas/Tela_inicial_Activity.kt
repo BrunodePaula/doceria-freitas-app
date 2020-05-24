@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.toolbar.*
 
 class Tela_inicial_Activity : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    private val context: Context get() = this
 
 
     override  fun onCreate(savedInstanceState: Bundle?){
@@ -38,7 +39,7 @@ class Tela_inicial_Activity : DebugActivity(), NavigationView.OnNavigationItemSe
             startActivity(intent)
         }
 
-        buttonPedidosDeVendas.setOnClickListener {
+        /*buttonPedidosDeVendas.setOnClickListener {
             var intent = Intent(this, TelaSecundariaActivity ::class.java)
             val button = buttonPedidosDeVendas.text.toString()
             val params = Bundle()
@@ -61,7 +62,7 @@ class Tela_inicial_Activity : DebugActivity(), NavigationView.OnNavigationItemSe
 
 
             startActivity(intent)
-        }
+        }*/
 
         // colocar toolbar
         setSupportActionBar(toolbar)
@@ -79,6 +80,7 @@ class Tela_inicial_Activity : DebugActivity(), NavigationView.OnNavigationItemSe
 
         return true
     }
+
 
     fun cliqueSair() {
         val returnIntent = Intent();
@@ -129,8 +131,9 @@ class Tela_inicial_Activity : DebugActivity(), NavigationView.OnNavigationItemSe
                 Toast.makeText(this, "Clicou pedidos", Toast.LENGTH_SHORT).show()
             }
 
-            R.id.nav_mensagens -> {
-                Toast.makeText(this, "Clicou Mensagens", Toast.LENGTH_SHORT).show()
+            R.id.nav_localizacao -> {
+                var intent = Intent(this, MapasActivity::class.java)
+                startActivity(intent)
             }
 
             R.id.nav_config -> {

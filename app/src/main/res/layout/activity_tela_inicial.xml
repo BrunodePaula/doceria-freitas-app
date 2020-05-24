@@ -34,7 +34,7 @@
                 android:text="Clientes"
                 android:textColor="#FFFFFF" />
 
-            <Button
+            <!--<Button
                 android:id="@+id/buttonPedidosDeVendas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimary"
                 android:text="Estoque"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF" />-->
 
     </LinearLayout>
 

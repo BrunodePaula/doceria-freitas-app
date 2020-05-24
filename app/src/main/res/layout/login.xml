@@ -43,6 +43,12 @@
         android:ems="10"
         android:inputType="textPassword" />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkLembrar"
+        android:text="Lembrar login"/>
+
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"

@@ -24,24 +24,24 @@
             android:layout_marginTop="16dp"
             android:text="20dp"/>
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="260dp"
-                android:layout_height="110dp"
-                android:id="@+id/cardImage"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="6dp"/>
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@android:style/Widget.ProgressBar.Small"
-                android:layout_gravity="center"
-                android:id="@+id/cardProgress"
-                android:layout_marginRight="6dp"
-                android:visibility="invisible"/>
-        </FrameLayout>
+<!--        <FrameLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <ImageView-->
+<!--                android:layout_width="260dp"-->
+<!--                android:layout_height="110dp"-->
+<!--                android:id="@+id/cardImage"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginTop="6dp"/>-->
+<!--            <ProgressBar-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                style="@android:style/Widget.ProgressBar.Small"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:id="@+id/cardProgress"-->
+<!--                android:layout_marginRight="6dp"-->
+<!--                android:visibility="invisible"/>-->
+<!--        </FrameLayout>-->
 
     </LinearLayout>
 

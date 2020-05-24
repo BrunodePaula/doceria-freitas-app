@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "289775405722",
+    "firebase_url": "https://doceria-freitas.firebaseio.com",
+    "project_id": "doceria-freitas",
+    "storage_bucket": "doceria-freitas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289775405722:android:4ea7bfb0f2e4312f922d23",
+        "android_client_info": {
+          "package_name": "br.com.brunodepaula.doceriafreitas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289775405722-2vrievjlofmjqnl909ek5gplune5k5co.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ4N1UIJ2ysSwlDHHH-OldsNa4dBRwqPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289775405722-2vrievjlofmjqnl909ek5gplune5k5co.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

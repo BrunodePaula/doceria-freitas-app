@@ -50,9 +50,10 @@ class Tela_inicial_Activity : DebugActivity(), NavigationView.OnNavigationItemSe
 
             startActivity(intent)
         }
+        */
 
         buttonEstoque.setOnClickListener {
-            var intent = Intent(this, TelaSecundariaActivity ::class.java)
+            var intent = Intent(this, EstoqueActivity ::class.java)
 
             val button = buttonEstoque.text.toString()
             val params = Bundle()
@@ -62,7 +63,7 @@ class Tela_inicial_Activity : DebugActivity(), NavigationView.OnNavigationItemSe
 
 
             startActivity(intent)
-        }*/
+        }
 
         // colocar toolbar
         setSupportActionBar(toolbar)
@@ -138,6 +139,11 @@ class Tela_inicial_Activity : DebugActivity(), NavigationView.OnNavigationItemSe
 
             R.id.nav_config -> {
                 Toast.makeText(this, "Clicou configuração", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.nav_duvidas -> {
+                var intent = Intent(this, DuvidasActivity::class.java)
+                startActivity(intent)
             }
 
             R.id.nav_sair -> {

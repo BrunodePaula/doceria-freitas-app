@@ -41,14 +41,14 @@
                 android:backgroundTint="@color/colorPrimary"
                 android:text="Pedidos"
                 android:textColor="#FFFFFF" />
-
+               -->
             <Button
                 android:id="@+id/buttonEstoque"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimary"
                 android:text="Estoque"
-                android:textColor="#FFFFFF" />-->
+                android:textColor="#FFFFFF" />
 
     </LinearLayout>
 

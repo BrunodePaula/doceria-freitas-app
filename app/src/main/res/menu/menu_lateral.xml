@@ -14,6 +14,10 @@
             android:icon="@drawable/ic_configuracoes_black"
             android:title="Configurações" />
         <item
+            android:id="@+id/nav_duvidas"
+            android:icon="@drawable/ic_forum_black"
+            android:title="Dúvidas Frequentes" />
+        <item
             android:id="@+id/nav_sair"
             android:icon="@drawable/ic_sair"
             android:title="Sair" />
